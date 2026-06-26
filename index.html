@@ -1,1 +1,733 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plastic Pollution - Ayden Kharoti</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        oceanDark: '#0b132b',
+                        oceanDeep: '#1c2541',
+                        ecoGreen: '#10b981',
+                        ecoLight: '#34d399',
+                        warningRed: '#ef4444',
+                        plasticPurple: '#8b5cf6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-oceanDark text-gray-100 font-sans min-h-screen flex flex-col overflow-x-hidden">
 
+    <header class="sticky top-0 z-50 bg-oceanDeep/90 backdrop-blur-md border-b border-gray-800 px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <div class="p-2 bg-ecoGreen/10 rounded-lg text-ecoGreen">
+                <i data-lucide="droplet" class="w-6 h-6"></i>
+            </div>
+            <div>
+                <h1 class="text-lg font-bold tracking-tight text-white">PLASTIC POLLUTION</h1>
+                <p class="text-xs text-gray-400">By: Ayden Kharoti, R13L</p>
+            </div>
+        </div>
+        <nav class="hidden md:flex items-center gap-6">
+            <a href="#intro" class="text-sm font-medium text-gray-300 hover:text-ecoGreen transition">Introduction</a>
+            <a href="#facts" class="text-sm font-medium text-gray-300 hover:text-ecoGreen transition">The Facts</a>
+            <a href="#impact" class="text-sm font-medium text-gray-300 hover:text-ecoGreen transition">The Impact</a>
+            <a href="#solution" class="text-sm font-medium text-gray-300 hover:text-ecoGreen transition">The Solution</a>
+            <a href="#game" class="bg-ecoGreen hover:bg-ecoLight text-oceanDark font-bold px-4 py-2 rounded-lg text-sm transition flex items-center gap-2">
+                <i data-lucide="gamepad-2" class="w-4 h-4"></i> Play Eco-Sorter
+            </a>
+        </nav>
+        <button onclick="toggleMobileMenu()" class="md:hidden text-gray-300 hover:text-white">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+    </header>
+
+    <div id="mobileMenu" class="hidden fixed inset-0 z-40 bg-oceanDark/95 backdrop-blur-lg flex flex-col justify-center items-center gap-8 text-xl">
+        <button onclick="toggleMobileMenu()" class="absolute top-6 right-6 text-gray-300 hover:text-white">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <a href="#intro" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-ecoGreen">Introduction</a>
+        <a href="#facts" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-ecoGreen">The Facts</a>
+        <a href="#impact" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-ecoGreen">The Impact</a>
+        <a href="#solution" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-ecoGreen">The Solution</a>
+        <a href="#game" onclick="toggleMobileMenu()" class="bg-ecoGreen text-oceanDark font-bold px-6 py-3 rounded-xl flex items-center gap-2">
+            <i data-lucide="gamepad-2" class="w-5 h-5"></i> Play Eco-Sorter
+        </a>
+    </div>
+
+    <main class="flex-grow">
+        <section class="relative min-h-[85vh] flex items-center justify-center px-6 overflow-hidden bg-gradient-to-b from-oceanDeep to-oceanDark">
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-10 left-10 w-72 h-72 bg-ecoGreen rounded-full filter blur-3xl animate-pulse"></div>
+                <div class="absolute bottom-10 right-10 w-96 h-96 bg-plasticPurple rounded-full filter blur-3xl"></div>
+            </div>
+
+            <div class="max-w-4xl text-center relative z-10">
+                <span class="inline-block px-4 py-1.5 bg-ecoGreen/15 text-ecoGreen rounded-full text-xs font-bold tracking-wider uppercase mb-6 border border-ecoGreen/30">
+                    Environmental Presentation
+                </span>
+                <h1 class="text-5xl md:text-8xl font-black text-white tracking-tight mb-6">
+                    PLASTIC <span class="text-transparent bg-clip-text bg-gradient-to-r from-ecoGreen via-ecoLight to-blue-400">POLLUTION</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                    Single-use plastic rubbish harms our land, oceans, and wildlife. Discover the scale, the impacts, and the practical everyday choices to save our precious planet.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#intro" class="bg-ecoGreen hover:bg-ecoLight text-oceanDark font-bold px-8 py-4 rounded-xl transition duration-300 shadow-lg shadow-ecoGreen/20 flex items-center justify-center gap-2 text-base">
+                        Start Exploring <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#game" class="bg-oceanDeep hover:bg-gray-800 text-white font-medium px-8 py-4 rounded-xl transition duration-300 border border-gray-700 flex items-center justify-center gap-2 text-base">
+                        <i data-lucide="gamepad-2" class="w-5 h-5 text-plasticPurple"></i> Try the Mini-Game
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="intro" class="py-24 px-6 max-w-7xl mx-auto scroll-mt-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-sm font-bold uppercase tracking-widest text-plasticPurple mb-2">01. Introduction</h2>
+                    <h3 class="text-4xl md:text-5xl font-extrabold text-white mb-6">Our Plastic Planet</h3>
+                    <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+                        We live on a plastic-wrapped earth. While plastic is incredibly durable and lightweight, those exact qualities make it one of the most persistent and devastating threats to ecosystems worldwide.
+                    </p>
+                    <div class="p-6 bg-purple-950/30 border border-plasticPurple/30 rounded-2xl flex items-start gap-4 mb-8">
+                        <div class="p-3 bg-plasticPurple/20 text-plasticPurple rounded-xl">
+                            <i data-lucide="sparkles" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-1">"Use less plastic, make earth fantastic!"</h4>
+                            <p class="text-sm text-gray-300">Choosing reusable bags and bottles keeps nature clean, preserving our fragile marine systems and local wildlife for generations to come.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-red-950/40 to-oceanDeep border border-warningRed/30 rounded-3xl p-8 md:p-10 relative overflow-hidden flex flex-col justify-between min-h-[400px]">
+                    <div class="absolute top-0 right-0 p-8 opacity-10">
+                        <i data-lucide="alert-triangle" class="w-48 h-48 text-warningRed"></i>
+                    </div>
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-warningRed/20 text-warningRed rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+                            <i data-lucide="shield-alert" class="w-4 h-4"></i> Microplastic Warning
+                        </div>
+                        <h4 class="text-2xl font-bold text-white mb-4">Did You Know?</h4>
+                        <p class="text-gray-300 leading-relaxed mb-6 text-lg">
+                            The average human unknowingly consumes approximately <span class="text-warningRed font-bold text-xl">5 grams</span> of microplastics every single week.
+                        </p>
+                    </div>
+
+                    <div class="mt-auto">
+                        <div class="relative w-full h-48 bg-oceanDark/60 rounded-2xl border border-gray-800 p-6 flex flex-col justify-between items-center cursor-pointer group" onclick="shatterCard()">
+                            <div id="creditCardGraphic" class="w-64 h-36 bg-gradient-to-r from-red-500 to-amber-600 rounded-xl shadow-lg relative p-4 transition-all duration-500 group-hover:scale-105 group-hover:rotate-1">
+                                <div class="flex justify-between items-start">
+                                    <div class="w-10 h-8 bg-amber-300/80 rounded-md"></div>
+                                    <i data-lucide="contactless" class="w-6 h-6 text-white/80"></i>
+                                </div>
+                                <div class="mt-8 text-white font-mono tracking-widest text-sm">5g MICROPLASTICS</div>
+                                <div class="mt-2 flex justify-between text-[10px] text-white/70 font-mono">
+                                    <span>WEEKLY CONSUMPTION</span>
+                                    <span>1 CARD</span>
+                                </div>
+                            </div>
+                            <div id="shatteredOverlay" class="absolute inset-0 bg-oceanDeep/95 rounded-2xl flex flex-col items-center justify-center p-4 text-center opacity-0 pointer-events-none transition-opacity duration-300">
+                                <div class="flex gap-1 mb-2">
+                                    <div class="w-2 h-2 bg-warningRed rounded-full animate-ping"></div>
+                                    <span class="text-xs text-warningRed font-mono font-bold">SHATTERED INTO MICRO PARTICLES</span>
+                                </div>
+                                <p class="text-xs text-gray-300">That is the weight of one standard debit card ending up in your drinking water, food, and air every 7 days!</p>
+                                <button class="mt-3 text-xs text-ecoGreen underline" onclick="resetCard(event)">Reset Card</button>
+                            </div>
+                        </div>
+                        <p class="text-center text-xs text-gray-400 mt-3">Click or tap the credit card above to visualise the weekly breakdown.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="facts" class="py-24 bg-oceanDeep/50 px-6 scroll-mt-20">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-sm font-bold uppercase tracking-widest text-ecoGreen">02. The Facts</span>
+                    <h2 class="text-4xl md:text-5xl font-black text-white mt-2">The Scale of Plastic Pollution</h2>
+                    <p class="text-gray-300 mt-4">Understanding the sizes, lifetimes, and journey of plastic materials as they degrade in nature.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <div class="bg-oceanDark border border-gray-800 rounded-2xl p-8 hover:border-blue-500/50 transition duration-300 group">
+                        <div class="w-12 h-12 bg-blue-500/15 text-blue-400 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                            <i data-lucide="package" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Macroplastics</h3>
+                        <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider block mb-4">&gt; 5mm Size</span>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            These are large plastic items over 5mm in size. Highly visible and easily caught in marine environments, they entangle animals and break down into smaller pieces. Examples include plastic bottles and food wraps.
+                        </p>
+                    </div>
+
+                    <div class="bg-oceanDark border border-gray-800 rounded-2xl p-8 hover:border-ecoGreen/50 transition duration-300 group">
+                        <div class="w-12 h-12 bg-ecoGreen/15 text-ecoGreen rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                            <i data-lucide="sparkles" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Microplastics</h3>
+                        <span class="text-xs font-semibold text-ecoGreen uppercase tracking-wider block mb-4">&lt; 5mm Size</span>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Tiny plastic particles less than 5mm in size, normally ingested by fish, plankton, and birds. Once dispersed, these fragments are virtually impossible to fully filter or clean from global marine waters.
+                        </p>
+                    </div>
+
+                    <div class="bg-oceanDark border border-gray-800 rounded-2xl p-8 hover:border-plasticPurple/50 transition duration-300 group">
+                        <div class="w-12 h-12 bg-plasticPurple/15 text-plasticPurple rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                            <i data-lucide="infinity" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Nanoplastics</h3>
+                        <span class="text-xs font-semibold text-plasticPurple uppercase tracking-wider block mb-4">&lt; 1µm Size</span>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Extremely small particles less than 1 micrometre. These originate from the deep degradation of microplastics and can directly penetrate biological membranes, entering cells of marine organisms.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-oceanDark to-oceanDeep border border-gray-800 rounded-3xl p-8 md:p-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <div class="flex items-center gap-3 text-ecoGreen font-bold text-sm uppercase tracking-wider mb-4">
+                                <i data-lucide="hourglass" class="w-5 h-5"></i> Decomposition Timeline
+                            </div>
+                            <h3 class="text-3xl font-bold text-white mb-6">The 450-Year Lifespan of a Single Bottle</h3>
+                            <p class="text-gray-300 mb-6 leading-relaxed">
+                                Unlike organic materials, synthetic plastics do not rot or return to the carbon cycle naturally. Instead, they photodegrade, fracturing into smaller toxic pieces over centuries.
+                            </p>
+                            <ul class="space-y-4 text-sm text-gray-300">
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="circle-alert" class="w-5 h-5 text-warningRed shrink-0 mt-0.5"></i>
+                                    <span>A single standard water bottle discarded today will persist for at least <strong>450 years</strong>.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="circle-alert" class="w-5 h-5 text-warningRed shrink-0 mt-0.5"></i>
+                                    <span>Plastic debris outlives your children, your grandchildren, and dozens of generations to follow.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-oceanDark/80 rounded-2xl p-6 border border-gray-850 flex flex-col justify-center">
+                            <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest text-center mb-4">Interactive Timeline Simulator</h4>
+                            <div class="space-y-6">
+                                <div>
+                                    <div class="flex justify-between text-xs mb-2 text-gray-300">
+                                        <span>Current Generation (You)</span>
+                                        <span class="font-bold text-ecoLight">0 - 80 Years</span>
+                                    </div>
+                                    <div class="w-full h-2.5 bg-gray-800 rounded-full overflow-hidden">
+                                        <div class="h-full bg-ecoGreen rounded-full" style="width: 17%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs mb-2 text-gray-300">
+                                        <span>Your Grandchildren's Lifetime</span>
+                                        <span class="font-bold text-ecoLight">80 - 180 Years</span>
+                                    </div>
+                                    <div class="w-full h-2.5 bg-gray-800 rounded-full overflow-hidden">
+                                        <div class="h-full bg-ecoGreen rounded-full" style="width: 40%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs mb-2 text-gray-300">
+                                        <span>Degradation Point reached</span>
+                                        <span class="font-bold text-warningRed">450 Years</span>
+                                    </div>
+                                    <div class="w-full h-2.5 bg-gray-800 rounded-full overflow-hidden">
+                                        <div class="h-full bg-warningRed rounded-full animate-pulse" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-8 text-center bg-gray-900/50 p-4 rounded-xl border border-gray-800">
+                                <span class="text-xs text-gray-400 block uppercase">Estimated Bottles Degraded so far</span>
+                                <span class="text-2xl font-black text-white font-mono tracking-wider mt-1 block">0.00%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact" class="py-24 px-6 max-w-7xl mx-auto scroll-mt-20">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-sm font-bold uppercase tracking-widest text-warningRed">03. The Impact</span>
+                <h2 class="text-4xl md:text-5xl font-black text-white mt-2">Environmental Damage</h2>
+                <p class="text-gray-300 mt-4">The deep, lasting ecological scars caused by millions of metric tonnes of disposable waste.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="bg-gradient-to-b from-oceanDeep to-oceanDark border border-gray-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-warningRed/15 text-warningRed rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="ship" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">Ocean Dumping</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            An estimated <strong class="text-white">11 million metric tonnes</strong> of plastic reach oceans yearly. This is equivalent to dumping one full bin lorry into the sea every minute.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-b from-oceanDeep to-oceanDark border border-gray-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-amber-500/15 text-amber-500 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="skull" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">Lethal Traps</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            Discarded commercial fishing nets and packing straps tangle, restrict, and suffocate birds, turtles, and marine mammals.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-b from-oceanDeep to-oceanDark border border-gray-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-blue-500/15 text-blue-400 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="globe" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">Ubiquitous Reach</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            Because this plastic takes centuries to rot, ocean currents carry particles into pristine beaches, arctic ice, and Mariana Trench depths.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-b from-oceanDeep to-oceanDark border border-gray-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-ecoGreen/15 text-ecoGreen rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="landplot" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">Land Origins</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            Most marine pollution starts right on land. It blows away from open landfill sites or escapes drains into urban rivers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-red-950/20 to-oceanDark border border-warningRed/20 rounded-3xl p-8 md:p-12">
+                <h3 class="text-2xl md:text-3xl font-bold text-white mb-8 text-center lg:text-left">Immediate Damage Checklists</h3>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-full bg-warningRed/10 flex items-center justify-center text-warningRed shrink-0">
+                                <i data-lucide="frown" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white mb-1">Wildlife Mistaken Feeding</h4>
+                                <p class="text-sm text-gray-400">Sea turtles mistake transparent plastic grocery bags for floating jellyfish food. Albatrosses and seagulls fill their stomachs with colourful rubbish fragments and starve to death.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-full bg-warningRed/10 flex items-center justify-center text-warningRed shrink-0">
+                                <i data-lucide="tree-pine" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white mb-1">Habitat Degradation</h4>
+                                <p class="text-sm text-gray-400">Beautiful sandy beaches, old-growth forests, and coastal marshes are progressively buried under mountains of synthetic debris, ruining safe nesting homes for local flora and fauna.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-full bg-warningRed/10 flex items-center justify-center text-warningRed shrink-0">
+                                <i data-lucide="factory" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white mb-1">Carbon Footprint</h4>
+                                <p class="text-sm text-gray-400">The chemical manufacturing processes used to synthesise new plastic releases carbon dioxide, methane, and toxic emissions that warm the planetary climate.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-full bg-warningRed/10 flex items-center justify-center text-warningRed shrink-0">
+                                <i data-lucide="cloud-lightning" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white mb-1">Accelerated Warming</h4>
+                                <p class="text-sm text-gray-400">Atmospheric greenhouse gases trap thermal radiation, which spikes ocean temperatures and drives highly unpredictable, destructive storms.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution" class="py-24 bg-oceanDeep/30 px-6 scroll-mt-20 border-t border-gray-800">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-sm font-bold uppercase tracking-widest text-ecoGreen">04. The Solution</span>
+                    <h2 class="text-4xl md:text-5xl font-black text-white mt-2">The Three Rs</h2>
+                    <p class="text-gray-300 mt-4">Practical everyday decisions we can make to bypass and eliminate synthetic waste.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-oceanDark border-t-4 border-t-red-500 border border-gray-850 p-8 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="inline-block px-3 py-1 bg-red-500/10 text-red-400 rounded-full text-xs font-bold uppercase mb-4">Step 1</div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Reduce</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                                Stop the waste at its source. Skip buying useless single-use packaging. Choose foods sold without excess plastic wrapping and invest in highly durable, long-term items instead.
+                            </p>
+                        </div>
+                        <ul class="space-y-2 text-xs text-gray-300">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-ecoGreen"></i> Reusable metal water bottles</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-ecoGreen"></i> Buying in bulk sizes</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-oceanDark border-t-4 border-t-amber-500 border border-gray-850 p-8 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="inline-block px-3 py-1 bg-amber-500/10 text-amber-400 rounded-full text-xs font-bold uppercase mb-4">Step 2</div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Reuse</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                                Extend the life of plastic that already exists. Fix damaged bags, donate extra items to local communities, and discover creative craft or household uses instead of sending things to a landfill site.
+                            </p>
+                        </div>
+                        <ul class="space-y-2 text-xs text-gray-300">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-ecoGreen"></i> Heavy cotton shopping totes</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-ecoGreen"></i> Upcycling old plastic containers</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-oceanDark border-t-4 border-t-ecoGreen border border-gray-850 p-8 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="inline-block px-3 py-1 bg-ecoGreen/10 text-ecoGreen rounded-full text-xs font-bold uppercase mb-4">Step 3</div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Recycle</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                                Sort clean waste correctly so recycling factories can melt and spin items down into clean raw materials instead of throwing them away.
+                            </p>
+                        </div>
+                        <ul class="space-y-2 text-xs text-gray-300">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-ecoGreen"></i> Checking local packaging labels</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-ecoGreen"></i> Washing and crushing food tins</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="game" class="py-24 px-6 max-w-5xl mx-auto scroll-mt-20">
+            <div class="text-center mb-12">
+                <span class="text-sm font-bold uppercase tracking-widest text-plasticPurple">Eco Mini-Game</span>
+                <h2 class="text-4xl font-black text-white mt-2">Waste-Sorter Challenge</h2>
+                <p class="text-gray-300 mt-2">Test your eco-sorting knowledge! Drag or click items to route them to the correct bins.</p>
+            </div>
+
+            <div class="bg-gradient-to-br from-oceanDeep to-oceanDark border border-gray-800 rounded-3xl p-6 md:p-10 shadow-2xl relative overflow-hidden">
+                <div class="flex flex-wrap justify-between items-center gap-4 mb-8 pb-6 border-b border-gray-800">
+                    <div class="flex items-center gap-6">
+                        <div>
+                            <span class="text-xs uppercase text-gray-400">Score</span>
+                            <span id="gameScore" class="text-3xl font-black text-ecoLight block font-mono">0</span>
+                        </div>
+                        <div>
+                            <span class="text-xs uppercase text-gray-400">Streak</span>
+                            <span id="gameStreak" class="text-3xl font-black text-plasticPurple block font-mono">0 🔥</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-2">
+                        <button onclick="restartGame()" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white font-medium text-xs rounded-lg transition flex items-center gap-1">
+                            <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> Reset
+                        </button>
+                        <button onclick="toggleSound()" id="soundBtn" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white font-medium text-xs rounded-lg transition flex items-center gap-1">
+                            <i data-lucide="volume-2" class="w-3.5 h-3.5"></i> Sound: On
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center justify-center py-10 min-h-[320px]">
+                    <div id="gameStartScreen" class="text-center">
+                        <div class="w-20 h-20 bg-ecoGreen/10 text-ecoGreen rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="recycle" class="w-10 h-10 animate-spin" style="animation-duration: 10s"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Are you an expert waste sorter?</h3>
+                        <p class="text-sm text-gray-400 max-w-md mx-auto mb-6">Sort single-use containers, plastics, and scraps. Learn why certain materials belong in special recycling facilities or landfill bins.</p>
+                        <button onclick="startGame()" class="bg-ecoGreen hover:bg-ecoLight text-oceanDark font-bold px-8 py-3.5 rounded-xl text-sm transition shadow-lg shadow-ecoGreen/20">
+                            Start Sorter Game
+                        </button>
+                    </div>
+
+                    <div id="gamePlayArea" class="hidden w-full flex flex-col items-center">
+                        <div class="text-center mb-4">
+                            <span class="text-xs text-gray-400 uppercase tracking-widest block mb-1">Item to Sort:</span>
+                            <h4 id="itemName" class="text-2xl font-black text-white tracking-tight">Plastic Soda Bottle</h4>
+                        </div>
+
+                        <div id="itemCardContainer" class="relative w-48 h-48 flex items-center justify-center bg-oceanDark border-2 border-dashed border-gray-700 rounded-3xl my-6 transition-all duration-300">
+                            <div id="itemVisual" class="transition-transform duration-300"></div>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 md:gap-6 w-full max-w-xl mt-4">
+                            <button onclick="submitSort('recycle')" class="group relative bg-blue-900/40 hover:bg-blue-800/60 border border-blue-500/30 p-4 rounded-2xl transition duration-200 text-center flex flex-col items-center justify-center gap-2">
+                                <div class="w-10 h-10 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center group-hover:scale-110 transition">
+                                    <i data-lucide="recycle" class="w-5 h-5"></i>
+                                </div>
+                                <span class="text-xs md:text-sm font-bold text-white">RECYCLE</span>
+                            </button>
+
+                            <button onclick="submitSort('compost')" class="group relative bg-amber-950/40 hover:bg-amber-900/60 border border-amber-500/30 p-4 rounded-2xl transition duration-200 text-center flex flex-col items-center justify-center gap-2">
+                                <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-500 flex items-center justify-center group-hover:scale-110 transition">
+                                    <i data-lucide="leaf" class="w-5 h-5"></i>
+                                </div>
+                                <span class="text-xs md:text-sm font-bold text-white">COMPOST</span>
+                            </button>
+
+                            <button onclick="submitSort('landfill')" class="group relative bg-gray-900 hover:bg-gray-800/80 border border-gray-750 p-4 rounded-2xl transition duration-200 text-center flex flex-col items-center justify-center gap-2">
+                                <div class="w-10 h-10 rounded-full bg-gray-700/40 text-gray-400 flex items-center justify-center group-hover:scale-110 transition">
+                                    <i data-lucide="trash-2" class="w-5 h-5"></i>
+                                </div>
+                                <span class="text-xs md:text-sm font-bold text-white">LANDFILL</span>
+                            </button>
+                        </div>
+
+                        <div id="feedbackMessage" class="mt-8 text-center min-h-[40px] text-sm text-gray-300 max-w-md px-4"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-gradient-to-t from-oceanDark to-oceanDeep px-6 text-center border-t border-gray-800">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-4xl font-extrabold text-white mb-6">THANK YOU</h2>
+                <h3 class="text-xl text-ecoLight mb-8">Any Questions?</h3>
+                <div class="p-6 bg-oceanDark/60 border border-gray-800 rounded-2xl max-w-md mx-auto mb-10">
+                    <p class="text-sm text-gray-400">Presentation developed according to slide materials compiled in class R13L.</p>
+                    <p class="text-sm font-bold text-white mt-2">"Use less plastic, make earth fantastic!"</p>
+                </div>
+                <div class="flex justify-center gap-4">
+                    <a href="#intro" class="text-xs text-gray-400 hover:text-white transition">Jump to top</a>
+                    <span class="text-gray-700">•</span>
+                    <a href="#facts" class="text-xs text-gray-400 hover:text-white transition">Scale breakdown</a>
+                    <span class="text-gray-700">•</span>
+                    <a href="#solution" class="text-xs text-gray-400 hover:text-white transition">Solution steps</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-oceanDark border-t border-gray-850 py-8 px-6 text-center text-xs text-gray-500">
+        <p>&copy; 2026 Ayden Kharoti, R13L. All environmental data source references are compiled inside original documents.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        let soundEnabled = true;
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+        function playSynthesisedSound(frequency, duration, type) {
+            if (!soundEnabled) return;
+            try {
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.type = type || 'sine';
+                osc.frequency.setValueAtTime(frequency, audioCtx.currentTime);
+                gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + duration);
+                osc.start();
+                osc.stop(audioCtx.currentTime + duration);
+            } catch (e) {}
+        }
+
+        function toggleSound() {
+            soundEnabled = !soundEnabled;
+            const btn = document.getElementById('soundBtn');
+            btn.innerHTML = soundEnabled ? '<i data-lucide="volume-2" class="w-3.5 h-3.5"></i> Sound: On' : '<i data-lucide="volume-x" class="w-3.5 h-3.5"></i> Sound: Off';
+            lucide.createIcons();
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function shatterCard() {
+            document.getElementById('shatteredOverlay').classList.remove('opacity-0');
+            document.getElementById('shatteredOverlay').classList.add('opacity-100');
+            playSynthesisedSound(180, 0.4, 'sawtooth');
+            playSynthesisedSound(400, 0.2, 'sine');
+        }
+
+        function resetCard(event) {
+            event.stopPropagation();
+            document.getElementById('shatteredOverlay').classList.remove('opacity-100');
+            document.getElementById('shatteredOverlay').classList.add('opacity-0');
+            playSynthesisedSound(600, 0.15, 'sine');
+        }
+
+        const gameItems = [
+            {
+                name: "Plastic Soda Bottle",
+                category: "recycle",
+                icon: "droplet",
+                color: "text-blue-400",
+                tip: "Correct! Empty, clean, and dry plastic drinking bottles belong in the recycling bin."
+            },
+            {
+                name: "Fresh Apple Core",
+                category: "compost",
+                icon: "apple",
+                color: "text-red-400",
+                tip: "Correct! Organic food waste breaks down naturally into nutrient-rich soil in the compost pile."
+            },
+            {
+                name: "Corrugated Cardboard Box",
+                category: "recycle",
+                icon: "box",
+                color: "text-amber-600",
+                tip: "Correct! Unsoiled cardboard is a prime candidate for manufacturing new paper goods."
+            },
+            {
+                name: "Squeeze Ketchup Bottle",
+                category: "recycle",
+                icon: "container",
+                color: "text-red-500",
+                tip: "Correct! If rinsed and clean, rigid plastic condiment containers can be processed."
+            },
+            {
+                name: "Banana Peel",
+                category: "compost",
+                icon: "banana",
+                color: "text-yellow-400",
+                tip: "Correct! Fruits, peels, and organic scraps belong directly in green waste recycling."
+            },
+            {
+                name: "Multi-layer Potato Crisp Packet",
+                category: "landfill",
+                icon: "pocket",
+                color: "text-purple-400",
+                tip: "Correct! Foil-lined plastic crisp packets cannot currently be separated easily and must go to landfill."
+            },
+            {
+                name: "Plastic Drinking Straw",
+                category: "landfill",
+                icon: "pin",
+                color: "text-pink-400",
+                tip: "Correct! Tiny straws slip through sorting machinery, ending up as ocean macroplastics. Landfill is correct."
+            },
+            {
+                name: "Clean Glass Preserve Jar",
+                category: "recycle",
+                icon: "glass-water",
+                color: "text-teal-300",
+                tip: "Correct! Glass can be melted down and recycled indefinitely."
+            },
+            {
+                name: "Crushed Aluminium Beverage Can",
+                category: "recycle",
+                icon: "cup-soda",
+                color: "text-gray-400",
+                tip: "Correct! Metal cans are highly recyclable and save massive amounts of greenhouse emissions when repurposed."
+            },
+            {
+                name: "Coffee Cup with Plastic Lining",
+                category: "landfill",
+                icon: "coffee",
+                color: "text-yellow-650",
+                tip: "Correct! Most takeaway paper cups are lined with plastic membrane, making them non-compostable."
+            }
+        ];
+
+        let score = 0;
+        let streak = 0;
+        let currentItemIndex = 0;
+        let sortedList = [...gameItems];
+
+        function shuffleList() {
+            for (let i = sortedList.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [sortedList[i], sortedList[j]] = [sortedList[j], sortedList[i]];
+            }
+        }
+
+        function startGame() {
+            document.getElementById('gameStartScreen').classList.add('hidden');
+            document.getElementById('gamePlayArea').classList.remove('hidden');
+            score = 0;
+            streak = 0;
+            currentItemIndex = 0;
+            updateGameUI();
+            loadItem();
+        }
+
+        function restartGame() {
+            startGame();
+        }
+
+        function loadItem() {
+            if (currentItemIndex >= sortedList.length) {
+                shuffleList();
+                currentItemIndex = 0;
+            }
+            const item = sortedList[currentItemIndex];
+            document.getElementById('itemName').innerText = item.name;
+            const container = document.getElementById('itemVisual');
+            container.innerHTML = `<i data-lucide="${item.icon}" class="w-20 h-20 ${item.color} animate-pulse"></i>`;
+            lucide.createIcons();
+            document.getElementById('feedbackMessage').innerHTML = "";
+            document.getElementById('itemCardContainer').className = "relative w-48 h-48 flex items-center justify-center bg-oceanDark border-2 border-dashed border-gray-700 rounded-3xl my-6 transition-all duration-300";
+        }
+
+        function submitSort(category) {
+            const item = sortedList[currentItemIndex];
+            const feedback = document.getElementById('feedbackMessage');
+            const cardContainer = document.getElementById('itemCardContainer');
+
+            if (category === item.category) {
+                score += 10;
+                streak += 1;
+                playSynthesisedSound(880, 0.15, 'sine');
+                playSynthesisedSound(1100, 0.2, 'sine');
+                cardContainer.className = "relative w-48 h-48 flex items-center justify-center bg-emerald-950/20 border-2 border-dashed border-emerald-500 rounded-3xl my-6 scale-95 transition-all duration-300";
+                feedback.innerHTML = `<span class="text-ecoGreen font-bold flex items-center justify-center gap-1"><i data-lucide="check-circle" class="w-4 h-4"></i> Correct!</span> <p class="text-xs text-gray-300 mt-1">${item.tip}</p>`;
+            } else {
+                streak = 0;
+                playSynthesisedSound(220, 0.35, 'sawtooth');
+                cardContainer.className = "relative w-48 h-48 flex items-center justify-center bg-red-950/20 border-2 border-dashed border-red-500 rounded-3xl my-6 animate-shake transition-all duration-300";
+                feedback.innerHTML = `<span class="text-warningRed font-bold flex items-center justify-center gap-1"><i data-lucide="alert-circle" class="w-4 h-4"></i> Incorrect</span> <p class="text-xs text-gray-300 mt-1">Actually, <strong>${item.name}</strong> belongs in <strong>${item.category.toUpperCase()}</strong>.</p>`;
+            }
+
+            lucide.createIcons();
+            updateGameUI();
+
+            setTimeout(() => {
+                currentItemIndex++;
+                loadItem();
+            }, 3000);
+        }
+
+        function updateGameUI() {
+            document.getElementById('gameScore').innerText = score;
+            document.getElementById('gameStreak').innerText = `${streak} 🔥`;
+        }
+
+        shuffleList();
+    </script>
+
+    <style>
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-6px); }
+            75% { transform: translateX(6px); }
+        }
+        .animate-shake {
+            animation: shake 0.2s ease-in-out 2;
+        }
+    </style>
+</body>
+</html>
